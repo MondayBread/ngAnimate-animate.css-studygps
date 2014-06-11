@@ -15,11 +15,26 @@ angular.module('ngAnimate-animate.css', ['ngAnimate'])
           removeClass : b
         };
       }
+      if(arguments.length == 4) {
+        var a = classNames;
+        var b = arguments[2];
+        var d = arguments[3];
+        classNames = {
+          enter : a,
+          move : a,
+          leave : b,
+          show : a,
+          hide : b,
+          addClass : a,
+          removeClass : b,
+          delay : d
+        };
+      }
       var timeoutKey = '$$animate.css-timer';
       var animateCSSStart = function(element, className, delay, done) {
         element.addClass(className);
         element.addClass('animated');
-        var timer = $timeout(done, delay || 2000, false);
+        var timer = $timeout(done, delay || 1000, false);
         element.data(timeoutKey, timer);
       };
       var animateCSSEnd = function(element, className) {
@@ -53,7 +68,7 @@ angular.module('ngAnimate-animate.css', ['ngAnimate'])
                           classNames.addClass(className) :
                           classNames.addClass));
           if(klass) {
-            animateCSSStart(element, klass, classNames.delay, done);
+            animateCSSStart(element, klass, 10, done);
             return animateCSSEnd(element, klass);
           }
           done();
@@ -201,5 +216,5 @@ angular.module('ngAnimate-animate.css', ['ngAnimate'])
   // by mobiconsoft for studygps
   // 
   .animation('.dn-fade-left-sg', ['animateCSSBuild', function(animateCSSBuild) {
-    return animateCSSBuild('dn-hinge','fadeInLeft','fadeOut', 1000);
+    return animateCSSBuild('dn-fade-left-sg','fadeInLeft','', 1000);
   }]);
