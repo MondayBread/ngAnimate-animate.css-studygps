@@ -195,4 +195,11 @@ angular.module('ngAnimate-animate.css', ['ngAnimate'])
 
   .animation('.dn-hinge', ['animateCSSBuild', function(animateCSSBuild) {
     return animateCSSBuild('dn-hinge','fadeIn','hinge');
+  }])
+
+  //
+  // by mobiconsoft for studygps
+  // 
+  .animation('.dn-fade-left-sg', ['animateCSSBuild', function(animateCSSBuild) {
+    return animateCSSBuild('dn-hinge','fadeInLeft','fadeOut', 1000);
   }]);

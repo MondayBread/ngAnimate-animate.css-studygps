@@ -1,16 +1,16 @@
 {
-  "name": "ngAnimate-animate.css",
-  "version": "0.1.1",
-  "homepage": "https://github.com/yearofmoo/ngAnimate-animate.css",
+  "name": "ngAnimate-animate.css-studygps",
+  "version": "0.1.2",
+  "homepage": "https://github.com/StudyGPS-Company/ngAnimate-animate.css-studygps",
   "authors": [
-    "yearofmoo <contact@yearofmoo.com>"
+    "yearofmoo <contact@yearofmoo.com>",
+    "peter <nulpulum@gmail.com>"
   ],
-  "description": "animate.css integration for ngAnimate in angular 1.2.X",
-  "main": ["animate.js"],
+  "description": "animate.css integration for ngAnimate in angular 1.2.X and add delay option",
+  "main": ["animate.js", "animate.css"],
   
   "keywords": [
     "ngAnimate",
-    "animate.css",
     "angular",
     "angular-animate"
   ],
@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "angular": "latest",
-    "angular-animate": "latest",
-    "animate.css": "latest"
+    "angular-animate": "latest"
   }
 }
